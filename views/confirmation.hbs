@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Pizza orddering assignment</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/mycss.css" />
+</head>
+
+<body>
+  <h2 class="forms">Confirmation Page</h2>
+  <form method="post" name="forms"
+        action="/submit">
+    <div class="forms">
+      <div class="forms2">
+        <fieldset>
+          <legend>Personal Information</legend>
+          Name {{name}} </br>
+          </br>
+          Phone No. {{phone}} </br>
+          </br>
+          Quantity {{quantity}}</br>
+          </br>
+          Pizza Size {{size}}</br>
+          </br>
+          Pizza Toppings {{topping}}</br>
+          </br>
+          Pizza Crust {{crust}}</br>
+          <br/>
+          price is {{price}}
+          </fieldset>
+        </fieldset>
+      </div>
+        <input type="hidden" name="id" value="{{id}}"/>
+        <input type="submit" value="Confirm your order" />
+          </form>
+       <button type="button"><a href="/">Cancel</a></button>
+      </div>
+    </div>
+
+  <footer>
+    <section>
+      <script type="text/javascript">
+        //<![CDATA[
+          var dt=new Date(document.lastModified); // Get document last modified date
+          document.write('<p>This page was last updated on '+dt.toLocaleString()) + '</p>';
+        //]]>
+      </script>
+    </section>
+  </footer>
+</body>
+
+</html>

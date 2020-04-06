@@ -1,0 +1,12 @@
+{
+    "Sizes": ["Small", "Medium", "Large"],
+    "Crust": ["Thin", "Regular"],
+    "Topings": [
+         "Anchovies",
+         "Pepperoni",
+         "Green Peppers",
+         "Mushrooms",
+         "Salami",
+         "Olives"
+    ]
+}

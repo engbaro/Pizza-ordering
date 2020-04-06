@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Pizza orddering assignment</title>
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href='/stylesheets/register.css'/>
+    <script src="//code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <h2 class="forms">Forms - will be used in Assignment #3</h2>
+  <form method="post" name="forms" id = "order"
+  >
+    <div class="forms">
+      <div class="forms2">
+        <fieldset>
+          <legend>Personal Information</legend>
+          Name <input name="name" id = "name" placeholder="Enter your first name"/><br />
+          Phone No. <input type="tel" id = "tel" name="phone" placeholder="123-45-678"/><br />
+          Quantity <input name="quantity" id = "quantity" placeholder="1"/><br />
+        </fieldset>
+        <fieldset>
+          <legend>Select crust</legend>
+          {{#each crust}}
+          <input type="radio" name = "crust" id = "crust" value= "{{this}}" />{{this}} 
+          {{/each}}
+        </fieldset>
+        <fieldset>
+          <legend>Select Size</legend>
+
+          {{#each sizes}}
+          <input type="radio" name = "size" id = "size" value= {{this}}  />{{this}} 
+          {{/each}}
+        </fieldset>
+        <div class="forms2">
+        <fieldset>
+          <legend>Choose Toppings - $1.79 Each</legend>
+          <div class="forms2">
+          {{#each topings}}
+            <input type="checkbox" name="topping" id = "topping" value={{this}}/> {{this}}<br />
+          {{/each}}
+        
+          </div>
+        </fieldset>
+      </div>
+        <input type="submit" value="PLACE YOUR ORDER" />
+        <input type="reset" value="START OVER" />
+      </div>
+    </div>
+  </form>
+  <div id="statusMsg">
+  </div>
+  <footer>
+    <section>
+    <script src="javascripts/index.js"></script>
+      <script type="text/javascript">
+        //<![CDATA[
+          var dt=new Date(document.lastModified); // Get document last modified date
+          document.write('<p>This page was last updated on '+dt.toLocaleString()) + '</p>';
+        //]]>
+      </script>
+    </section>
+  </footer>
+</body>
+
+</html>
